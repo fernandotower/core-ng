@@ -241,7 +241,7 @@ class HtmlBase {
             $cadena .= "title='" . $this->atributos [self::TITULO] . "' ";
         }
         
-        if (! isset ( $this->atributos [self::ID] ) || $this->atributos [self::ID] != '') {
+        if (! isset ( $this->atributos [self::ID] ) || $this->atributos [self::ID] == '') {
             $this->atributos [self::ID] = 'controlSara';
         
         }
