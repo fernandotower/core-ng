@@ -59,7 +59,7 @@ class Encriptador {
 
         if(function_exists('mcrypt_decrypt'))
         {
-            $cadena=trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->securekey, base64_decode($input), MCRYPT_MODE_ECB));            
+            $cadena=trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->llave, base64_decode($input), MCRYPT_MODE_ECB));            
         
         }else {
             $cadena=AesCtr::decrypt (base64_decode($cadena), $this->llave, 256 );
