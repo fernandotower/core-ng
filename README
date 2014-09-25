@@ -1,0 +1,47 @@
+   ____ ___  ____  _____                  
+  / ___/ _ \|  _ \| ____|     _ __   __ _ 
+ | |  | | | | |_) |  _| _____| '_ \ / _` |
+ | |__| |_| |  _ <| |__|_____| | | | (_| |
+  \____\___/|_| \_\_____|    |_| |_|\__, |
+                                   
+Base de Desarrollo del Sistema de Información para Entidades Educativas
+	------------------------------
+UNIVERSIDAD DISTRITAL Francisco José de Caldas
+Oficina asesora de Sistemas
+
+Descripción
+-----------------
+
+Basado en SARA, Sistema para la Articulación Rápida de Aplicaciones
+(System for Addressing the Rapid development of Applications), Core -ng
+(leido como Core engine); presenta una solución de código abierto para
+entidades educativas en donde se integran diferentes módulos que constiuyen
+un ERP especializado para los sistemas de:
+
+* Gestión Académica:
+	- Inscripción de Aspirantes
+	- Admisiones
+	- Control de horarios (cursos, docentes, espacios)
+	- Gestión de notas.
+	- Gestión de consejerías
+	- Seguimiento del rendimiento académico
+	- Gestión de casos
+	- Estructuración de Syllabus
+	- Plan de trabajo docente
+	- Asignación de puntajes
+* Gestión de Personal
+	-Gestión de contatistas
+	- Gestión de proveedores
+* Gestión de Recursos Físicos
+	-Gestión de solicitudes de servicios
+	- Gestión de almacén e inventario
+	- Sistema de Información Geográfica y BIM
+* Gestión de proceso de Bienestar Institucional
+* Gestión Financiera
+	- Gestión de nóminas
+* Integración con Sistemas de BI	
+	
+	
+
+Está escrito en lenguaje PHP y propende por una arquitectura
+dividida en capas.
