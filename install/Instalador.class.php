@@ -78,6 +78,7 @@ class Instalador {
             
             // 5. Guardar los datos en el archivo de configuracion
             if (! $this->guardarDatosConfiguracion ()) {
+            	
                 $mensajeError = "No se pudo guardar los datos de configuración!!!\nCambiar permisos de /configuracion/config.inc.php";
                 break;
             }
@@ -91,6 +92,8 @@ class Instalador {
             }
             
             // 7. Guardar los datos del módulo de desarrollo
+            
+            
             
             if (isset ( $_REQUEST ['moduloDesarrollo'] )) {
                 
@@ -220,29 +223,43 @@ class Instalador {
         }
         
         $linea = "<?php\n/*\n";
-        $resultado &= fwrite ( $fp, $linea );
+        $resultado =$resultado && fwrite ( $fp, $linea );
+        
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbsys"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado &&  fwrite ( $fp, $linea . "\n" );
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbdns"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbpuerto"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbnombre"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbusuario"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbclave"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["prefijo"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
         $linea = $this->encriptador->codificar ( $_REQUEST ["dbesquema"] );
-        $resultado &= fwrite ( $fp, $linea . "\n" );
+        $resultado =$resultado && fwrite ( $fp, $linea . "\n" );
+        
         $linea = "*/\n?>";
-        $resultado &= fwrite ( $fp, $linea );
+        $resultado =$resultado && fwrite ( $fp, $linea );
+        
         $linea = $this->cuerpoPaginaConfiguracion ();
-        $resultado &= fwrite ( $fp, $linea );
+        $resultado =$resultado && fwrite ( $fp, $linea );
         
         fclose ( $fp );
+        
+        
         return $resultado;
     
     }
