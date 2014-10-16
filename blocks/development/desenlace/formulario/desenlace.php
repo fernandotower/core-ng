@@ -8,16 +8,16 @@
 $esteBloque = $this->miConfigurador->getVariableConfiguracion ( "esteBloque" );
 
 // ---------------- SECCION: Parámetros Globales del Formulario ----------------------------------
-/**
- * Atributos que deben ser aplicados a todos los controles de este formulario. Se utiliza un arreglo
- * independiente debido a que los atributos individuales se reinician cada vez que se declara un campo.
- * 
- * Si se utiliza esta técnica es necesario realizar un mezcla entre este arreglo y el específico en cada control:
- * $atributos=  array_merge($atributos,$atributosGlobales);
- * 
- * 
- */
-$atributosGlobales['campoSeguro']='true';
+        /**
+        * Atributos que deben ser aplicados a todos los controles de este formulario.
+        * Se utiliza un arreglo
+        * independiente debido a que los atributos individuales se reinician cada vez que se declara un campo.
+        *
+        * Si se utiliza esta técnica es necesario realizar un mezcla entre este arreglo y el específico en cada control:
+        * $atributos= array_merge($atributos,$atributosGlobales);
+        */
+        $atributosGlobales ['campoSeguro'] = 'true';
+        $_REQUEST['tiempo']=time();
 
 //-------------------------------------------------------------------------------------------------
 
@@ -111,13 +111,12 @@ $valorCodificado = "actionBloque=" . $esteBloque ["nombre"];
 $valorCodificado .= "&pagina=" . $this->miConfigurador->getVariableConfiguracion('pagina');
 $valorCodificado .= "&bloque=" . $esteBloque ["id_bloque"];
 $valorCodificado .= "&bloqueGrupo=" . $esteBloque ["grupo"];
-/**
- * SARA permite que los nombres de los campos sean dinámicos. Para ello utiliza la hora en que es creado el formulario para
- * codificar el nombre de cada campo. Si se utiliza esta técnica es necesario pasar dicho tiempo como una variable:
- * (a) invocando a la variable $_REQUEST ['tiempo'] que se ha declarado en ready.php o
- * (b) asociando el tiempo en que se está creando el formulario
- */ 
-$valorCodificado .= "&tiempo=" . $_REQUEST ['tiempo'];
+        /**
+         * SARA permite que los nombres de los campos sean dinámicos.
+         * Para ello utiliza la hora en que es creado el formulario para
+         * codificar el nombre de cada campo. 
+         */
+        $valorCodificado .= "&campoSeguro=" . $_REQUEST['tiempo'];
 //Paso 2: codificar la cadena resultante
 $valorCodificado = $this->miConfigurador->fabricaConexiones->crypto->codificar ( $valorCodificado );
 
