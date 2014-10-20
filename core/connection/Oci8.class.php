@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*
  * ############################################################################ # UNIVERSIDAD DISTRITAL Francisco Jose de Caldas # # Copyright: Vea el archivo LICENCIA.txt que viene con la distribucion # ############################################################################
