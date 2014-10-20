@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * Autenticador.class.php
