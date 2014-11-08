@@ -33,3 +33,8 @@ $(function() {
 		event.preventDefault();
 	});
 });
+
+//Datatable con jquery themeroller
+//var table = $('#example').DataTable({
+//	  "jQueryUI": true        	               
+//	});

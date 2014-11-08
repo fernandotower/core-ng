@@ -8,6 +8,8 @@ $estilo [$indice] = "estiloTexto.css";
 $indice ++;
 $estilo [$indice] = "estiloFormulario.css";
 $indice ++;
+$estilo[$indice++]="datatables_themeroller.css";
+$indice ++;
 
 $host = $this->miConfigurador->getVariableConfiguracion ( "host" );
 $sitio = $this->miConfigurador->getVariableConfiguracion ( "site" );

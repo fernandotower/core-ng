@@ -19,6 +19,8 @@ if (isset ( $_REQUEST ['jquery'] )) {
     $indice ++;
     $funcion [$indice] = "javascript/jquery.validationEngine-es.js";
     $indice ++;
+    $funcion [$indice] = "javascript/datatables.js";
+    $indice ++;
 }
 
 foreach ( $funcion as $nombre ) {
