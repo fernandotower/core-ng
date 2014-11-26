@@ -1,11 +1,3 @@
-//Para incluir el plugin datatables español en Sara
-// en el archivo ready.php del bloque se debe agregar la dirección del archivo:
-//$('#example').DataTable({
-//				"language": {				
-//					"url":  "<?php echo $this->host.$this->site.'/plugin/scripts/javascript/datatables.esp.txt';?>"    																	    
-//  				}        	          	               
-//        	});
-
 
 {
 	"sProcessing":     "Procesando...",
